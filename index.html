@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+$numbers = array(3, 8, 10, 11, 14, 18, 22, 26, 28, 29, 31, 33, 34, 35, 39,  40, 41, 43, 44, 45, 46, 47, 48);  // Tworzymy zbiór liczb
+$rand_keys = array_rand($numbers, 6);  // Generujemy 6 losowych kluczy
+
+// Wyciągamy wartości z tablicy $numbers na podstawie kluczy
+$selected_numbers = array_intersect_key($numbers, array_flip($rand_keys));
+
+// Wyświetlamy wybrane liczby
+print_r($selected_numbers);
+
+// W powyższym kodzie tworzymy zbiór liczb, a następnie generujemy 6 losowych kluczy z tego zbioru za pomocą funkcji array_rand(). W końcowym kroku wyciągamy wartości z tablicy $numbers na podstawie tych kluczy i wyświetlamy je.
+
+?>
+
+</body>
+</html>
+
